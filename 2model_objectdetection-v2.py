@@ -171,6 +171,10 @@ def model_choice():
                 panel2.config(image="")
                 panel2.image=""
                 panel2.place(x=994,y=150)
+                title1.config(text="")
+                title1.place(x=15,y=100)
+                title2.config(text="")
+                title2.place(x=990,y=100)
                 
             elif val2==1:
                 object_det_Yolo()
@@ -182,10 +186,18 @@ def model_choice():
                 panel2.config(image="")
                 panel2.image=""
                 panel2.place(x=994,y=150)
+                title1.config(text="")
+                title1.place(x=15,y=100)
+                title2.config(text="")
+                title2.place(x=990,y=100)
 
             elif val3==1:
                 model_compare()
                 panel2.place(x=500,y=150)
+                title1.config(text="YOLO")
+                title1.place(x=220,y=100)
+                title2.config(text="MobileNetSSD")
+                title2.place(x=650,y=100)
 
             elif filetype.is_image(input_image):
                     messagebox.showerror("Error", "Δεν έχεις επιλέξει model.")
@@ -275,8 +287,14 @@ panel1=tk.Label(root,bg="grey")
 panel1.pack()
 panel1.place(x=10,y=150)
 panel2=tk.Label(root,bg="grey")
-panel2.pack(anchor="w")
+panel2.pack()
 panel2.place(x=500,y=150)
+title1=tk.Label(root,bg="grey",font = "Impact 25")
+title1.pack()
+title1.place(x=220,y=100)
+title2=tk.Label(root,bg="grey",font="Impact 25")
+title2.pack()
+title2.place(x=650,y=100)
 button=tk.Button(root,text="Επιλογή Εικόνας",font = "Impact 15", fg = "lightgray", highlightbackground="lightgray", bg ="black",command=callback)
 button.pack()
 button.place(x=390,y=625)
